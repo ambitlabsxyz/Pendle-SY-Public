@@ -73,7 +73,7 @@ contract HyperdriveHYPEDSY is SYBaseUpgV2, IPTokenWithSupplyCap {
         return token == yieldToken;
     }
 
-    function assetInfo() external view returns (AssetType assetType, address assetAddress, uint8 assetDecimals) {
+    function assetInfo() external pure returns (AssetType assetType, address assetAddress, uint8 assetDecimals) {
         return (AssetType.TOKEN, NATIVE, 18);
     }
 
@@ -82,6 +82,6 @@ contract HyperdriveHYPEDSY is SYBaseUpgV2, IPTokenWithSupplyCap {
     }
 
     function getAbsoluteTotalSupply() external view returns (uint256) {
-        return IERC4626(HYPED).totalSupply();
+        return IERC4626(HYPED).totalAssets();
     }
 }
