@@ -13,7 +13,7 @@ contract HyperdriveHYPEDSY is SYBaseUpgV2, IPTokenWithSupplyCap {
     constructor() SYBaseUpgV2(HYPED) {}
 
     function initialize(address _owner) external virtual initializer {
-        __SYBaseUpgV2_init("SY Hyperdrive Staked HYPE", "SY-HYPED", _owner);
+        __SYBaseUpgV2_init("SY Hyperdrive Liquid Staked HYPE", "SY-HYPED", _owner);
     }
 
     function _deposit(
